@@ -18,11 +18,13 @@
     "@strapi/database": "5.57.0",
     "@strapi/plugin-cloud": "5.57.0",
     "@strapi/plugin-users-permissions": "5.57.0",
+    "@strapi/provider-upload-cloudinary": "^5.58.0",
     "@strapi/strapi": "5.57.0",
-    "pg": "8.20.0",
+    "pg": "^8.23.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.30.3",
+    "strapi-plugin-multi-enum-select": "^1.2.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {

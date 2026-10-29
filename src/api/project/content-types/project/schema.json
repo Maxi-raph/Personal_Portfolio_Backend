@@ -1,0 +1,150 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Web app",
+      "enum": [
+        "Web app",
+        "Landing page",
+        "Dashboard",
+        "Experiment"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "featured": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "liveUrl": {
+      "type": "string",
+      "required": true
+    },
+    "githubUrl": {
+      "type": "string",
+      "required": true
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "role": {
+      "type": "string",
+      "default": "Frontend Engineer",
+      "required": false
+    },
+    "timeline": {
+      "type": "string",
+      "required": true
+    },
+    "stacks": {
+      "type": "customField",
+      "customField": "plugin::multi-enum-select.multi-enum-select",
+      "options": {
+        "default": null,
+        "delimiter": ",",
+        "options": [
+          "React",
+          "React Router",
+          "Next.js",
+          "TypeScript",
+          "Strapi",
+          "Node",
+          "Tailwind ",
+          "Figma",
+          "TanStack Query",
+          "TanStack Router",
+          "dnd-kit",
+          "Strapi"
+        ]
+      }
+    },
+    "challengeTitle": {
+      "type": "string",
+      "required": true
+    },
+    "challengeDesc": {
+      "type": "text",
+      "required": true
+    },
+    "solutionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "solutionDesc": {
+      "type": "text",
+      "required": true
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "resultsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "resultsDesc": {
+      "type": "text",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "solutionCards": {
+      "type": "component",
+      "component": "project.solution-card",
+      "repeatable": true,
+      "required": true
+    }
+  }
+}
